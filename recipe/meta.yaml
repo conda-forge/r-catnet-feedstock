@@ -1,4 +1,4 @@
-{% set version = '1.15.3' %}
+{% set version = '1.15.5' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/catnet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/catnet/catnet_{{ version }}.tar.gz
-  sha256: 935e3093ea98784d8507da19f77af2f1265ed9a6152876cbe2f7944f83cdf8b5
+  sha256: f0ab21765b222a57bd34fd8d772f109d682975b74a9a4719cc35cda1246490d7
 
 build:
   merge_build_host: True  # [win]
-  number: 1000
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -47,20 +47,15 @@ about:
     criteria.  Exhaustive search for fixed node orders and stochastic search of optimal
     orders via simulated annealing algorithm are implemented.  '
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+    - conda-forge/r
 
 # Package: catnet
 # Title: Categorical Bayesian Network Inference
-# Version: 1.15.3
+# Version: 1.15.5
 # Author: Nikolay Balov, Peter Salzman
 # Description: Structure learning and parameter estimation of discrete Bayesian networks using likelihood-based criteria.  Exhaustive search for fixed node orders and stochastic search of optimal orders via simulated annealing algorithm are implemented.
 # Maintainer: Nikolay Balov <nhbalov@gmail.com>
@@ -71,6 +66,6 @@ extra:
 # Collate: catnet.class.R catnet.def.R graph2catnet.R catnet.dags.R catnet.probs.R catnet.joint.prob.R catnet.marginal.prob.R catnet.samples.R catnet.loglik.R catnet.entropy.R catnet.categor.R catnet.dist.R catnet.plot.R catnet.find.R catnet.search.R catnet.predict.R catnet.chisq.R catnet.histo.R catnet.cluster.R catnet.bif.R catnet.quant.R catnet.pathway.R zzz.R
 # LazyLoad: yes
 # Repository: CRAN
-# Date/Publication: 2017-10-26 05:11:50 UTC
-# Packaged: 2017-10-26 04:58:47 UTC; root
+# Date/Publication: 2019-04-16 16:33:01 UTC
+# Packaged: 2019-04-15 14:52:23 UTC; nbalov
 # NeedsCompilation: yes
