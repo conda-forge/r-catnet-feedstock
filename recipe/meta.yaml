@@ -1,4 +1,4 @@
-{% set version = "1.15.6" %}
+{% set version = "1.15.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/catnet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/catnet/catnet_{{ version }}.tar.gz
-  sha256: 4b843ba3abfbb30e5badbc965d74b1c907c48dde25e7b98f3798026467dfb808
+  sha256: 0f09e439e66fc08108582d63359be211076080a073c873cea5b748096682b804
 
 build:
   merge_build_host: true  # [win]
