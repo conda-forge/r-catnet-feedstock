@@ -1,4 +1,4 @@
-{% set version = "1.15.7" %}
+{% set version = "1.16.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/catnet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/catnet/catnet_{{ version }}.tar.gz
-  sha256: 0f09e439e66fc08108582d63359be211076080a073c873cea5b748096682b804
+  sha256: fb0f055cd862d10533fa6c2d099bc54b42c1e3078c21a21bab98a7393962d5e1
 
 build:
   merge_build_host: true  # [win]
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,8 +44,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=catnet
   license: GPL-2.0-or-later
-  summary: 'Structure learning and parameter estimation of discrete Bayesian networks using likelihood-based criteria.  Exhaustive search for fixed node orders and
-    stochastic search of optimal orders via simulated annealing algorithm are implemented.  '
+  summary: 'Structure learning and parameter estimation of discrete Bayesian networks using likelihood-based criteria.  Exhaustive search for fixed node orders and stochastic search of optimal orders via simulated annealing algorithm are implemented.  '
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
